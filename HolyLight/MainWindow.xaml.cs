@@ -1,9 +1,15 @@
-﻿using DevExpress.Mvvm;
+﻿
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 
 namespace HolyLight
 {
+    using System.Windows;
+    using System.Windows.Media;
+
+    using GalaSoft.MvvmLight.Messaging;
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -16,6 +22,22 @@ namespace HolyLight
             {
                 s.Begin();
             });
+            Messenger.Default.Register<string>(this, Notification.Close, s => this.Close());
+            Messenger.Default.Register<HolyLight.DataModel.Option>(this, Notification.Option, o =>
+                {
+                        this.TitleLabel.Foreground = new SolidColorBrush(o.TitleColor); 
+                        this.ContentTextBlock.Foreground = new SolidColorBrush(o.ContentColor);
+                        this.BackgroundPanel.Background = new SolidColorBrush(o.BackgroundColor);
+                        this.DateTimeLabel.Content = o.DisplayDateTime.ToLongDateString();
+                        if (o.ShowDateTime)
+                        {
+                            this.DateTimeLabel.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            this.DateTimeLabel.Visibility = Visibility.Hidden;
+                        }
+                    });
         }
 
         private void layoutGroup_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)

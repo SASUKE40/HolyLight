@@ -4,8 +4,11 @@ using System.Linq;
 
 namespace HolyLight.DataModel
 {
+
     public class Lyric
     {
+        public Int64 Id { get; set; }
+        public int Lid { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
 

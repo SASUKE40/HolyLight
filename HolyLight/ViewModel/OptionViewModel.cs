@@ -4,28 +4,52 @@ using HolyLight.DataModel;
 namespace HolyLight.ViewModel
 {
     using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Data.Entity;
     using System.IO;
 
-    using DevExpress.Mvvm.DataAnnotations;
     using System.Windows.Media;
 
+    using GalaSoft.MvvmLight;
+    using GalaSoft.MvvmLight.Command;
+
     using Newtonsoft.Json;
+    using GalaSoft.MvvmLight.Messaging;
 
     public class OptionViewModel : ViewModelBase
     {
         private MainWindow mainWindow;
-        private Lyric lyric = new Lyric();
 
         private readonly string OPTION_CONFIG_FILE = "Option.json";
         protected MainViewModel MainViewModel { get; private set; }
 
-        private Option option;
+
+        public const string OptionPropertyName = "Option";
+
+        private Option option = new Option();
+
         public Option Option
         {
-            get { return option; }
-            set { option = value; }
+            get
+            {
+                return option;
+            }
+
+            set
+            {
+                if (option == value)
+                {
+                    return;
+                }
+
+                option = value;
+                RaisePropertyChanged(OptionPropertyName);
+            }
         }
-        
+        public const string LyricPropertyName = "Lyric";
+
+        private Lyric lyric = new Lyric();
 
         public Lyric Lyric
         {
@@ -33,68 +57,67 @@ namespace HolyLight.ViewModel
             {
                 return lyric;
             }
+
             set
             {
+                if (lyric == value)
+                {
+                    return;
+                }
+
                 lyric = value;
+                RaisePropertyChanged(LyricPropertyName);
             }
         }
         public OptionViewModel()
         {
-            if (System.IO.File.Exists(OPTION_CONFIG_FILE))
+            if (File.Exists(OPTION_CONFIG_FILE))
             {
-                Option = JsonConvert.DeserializeObject<Option>(System.IO.File.ReadAllText(OPTION_CONFIG_FILE));
+                Option = JsonConvert.DeserializeObject<Option>(File.ReadAllText(OPTION_CONFIG_FILE));
             }
             else
             {
-                Option = new Option();
-                System.IO.File.WriteAllText(OPTION_CONFIG_FILE, JsonConvert.SerializeObject(Option, Formatting.Indented));
+                File.WriteAllText(OPTION_CONFIG_FILE, JsonConvert.SerializeObject(Option, Formatting.Indented));
             }
-        }
-        [Command]
-        public void Submit(){
-            MainViewModel = new MainViewModel(Lyric);
-            mainWindow = new MainWindow();
-            mainWindow.DataContext = MainViewModel;
-            mainWindow.Show();
-        }
-        [Command]
-        public void File()
-        {
-        }
-        [Command]
-        public void Start()
-        {
+            using (var db = new LyricContext())
+            {
+                LyricCollection = db.Lyrics.Local;
+                db.Lyrics.Load();
+            }
+            SubmitCommand = new RelayCommand(this.Submit);
+            StartCommand = new RelayCommand(this.Start);
+            SaveCommand = new RelayCommand(this.Save);
         }
 
-        [Command]
+        public RelayCommand SubmitCommand { get; private set; }
+        public RelayCommand StartCommand { get; private set; }
+        public RelayCommand SaveCommand { get; private set; }
+        public ObservableCollection<Lyric> LyricCollection { get; set; }
+
+        public void Submit(){
+            using (var db = new LyricContext())
+            {
+                db.Lyrics.Add(Lyric);
+                db.SaveChanges();
+                LyricCollection = db.Lyrics.Local;
+                db.Lyrics.Load();
+            }
+        }
+
+
+        public void Start()
+        {
+            mainWindow = new MainWindow();
+            mainWindow.Show();
+            Messenger.Default.Send<Option>(Option, Notification.Option);
+            Messenger.Default.Send<Lyric>(Lyric, Notification.Lyric);
+        }
+
         public void Save()
         {
-            System.IO.File.WriteAllText(OPTION_CONFIG_FILE, JsonConvert.SerializeObject(Option, Formatting.Indented));
+            File.WriteAllText(OPTION_CONFIG_FILE, JsonConvert.SerializeObject(Option, Formatting.Indented));
         }
         
     }
-    public class Option
-    {
-        public int First { get; set; }
-        public int Second { get; set; }
-
-        public int Third { get; set; }
-
-        public DateTime DisplayDateTime { get; set; }
-
-        public bool ShowTitle { get; set; }
-
-        public bool ShowDateTime { get; set; }
-
-        public Color BackgroundColor { get; set; }
-
-        public Color TitleColor { get; set; }
-
-        public Color ContentColor { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("First: {0}, Second: {1}, Third: {2}, DisplayDateTime: {3}, ShowTitle: {4}, ShowDateTime: {5}, BackgroundColor: {6}, TitleColor: {7}, ContentColor: {8}", this.First, this.Second, this.Third, this.DisplayDateTime, this.ShowTitle, this.ShowDateTime, this.BackgroundColor, this.TitleColor, this.ContentColor);
-        }
-    }
+    
 }

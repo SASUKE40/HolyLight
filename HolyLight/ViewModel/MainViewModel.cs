@@ -1,14 +1,15 @@
 ﻿namespace HolyLight.ViewModel
 {
-    using System.Windows.Media.Animation;
-
-    using DevExpress.Mvvm;
-    using DevExpress.Mvvm.DataAnnotations;
+    using GalaSoft.MvvmLight;
+    using GalaSoft.MvvmLight.Command;
+    using GalaSoft.MvvmLight.Messaging;
 
     using HolyLight.DataModel;
 
     public class MainViewModel : ViewModelBase
     {
+        public const string LyricPropertyName = "Lyric";
+
         private Lyric lyric = new Lyric();
 
         public Lyric Lyric
@@ -17,22 +18,33 @@
             {
                 return lyric;
             }
+
             set
             {
+                if (lyric == value)
+                {
+                    return;
+                }
+
                 lyric = value;
+                RaisePropertyChanged(LyricPropertyName);
             }
         }
         public MainViewModel()
         {
-        }
-        public MainViewModel(Lyric lyric)
-        {
-            Lyric = lyric;
-            Messenger.Default.Register<Lyric>(this, l =>
+            Messenger.Default.Register<Lyric>(this,Notification.Lyric, l =>
             {
                 Lyric.Title = l.Title;
                 Lyric.Content = l.Content;
             });
+            CloseCommand = new RelayCommand(Close);
+        }
+
+        public RelayCommand CloseCommand { get; private set; }
+
+        public void Close()
+        {
+            Messenger.Default.Send<string>(null,Notification.Close);
         }
     }
 }
