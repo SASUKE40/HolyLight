@@ -1,0 +1,89 @@
+﻿<dx:DXWindow xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:ViewModel="clr-namespace:HolyLight.ViewModel"
+             x:Class="HolyLight.OptionWindow"
+             Title="圣光幻灯片" Height="400" Width="700" Icon="{dx:DXImage Image=Palette_32x32.png}"
+             WindowStartupLocation="CenterScreen">
+    <dx:DXWindow.DataContext>
+        <ViewModel:OptionViewModel />
+    </dx:DXWindow.DataContext>
+    <dx:DXTabControl>
+        <dx:DXTabControl.View>
+            <dx:TabControlMultiLineView AllowHideTabItems="False" HeaderLocation="Left" ShowHeaderMenu="False"/>
+        </dx:DXTabControl.View>
+        <dx:DXTabItem Header="设置">
+            <Grid Background="Transparent">
+                <dxlc:LayoutControl Orientation="Vertical">
+                    <dxlc:LayoutGroup View="GroupBox" Header="编号设置" IsCollapsible="True">
+                        <dxlc:LayoutItem Label="第一首">
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.First}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="第二首">
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.Second}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="第三首">
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.Third}"/>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Header="细节选项" View="GroupBox" IsCollapsible="True">
+                        <dxlc:LayoutItem>
+                            <dxe:CheckEdit Content="显示标题" EditValue="{Binding Option.ShowTitle}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem>
+                            <dxe:CheckEdit Content="显示时间" EditValue="{Binding Option.ShowDateTime}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem>
+                            <dxe:DateEdit Mask="D" DateTime="{Binding Option.DisplayDateTime}" />
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Header="主题编辑" View="GroupBox" IsCollapsible="True">
+                        <dxlc:LayoutItem Label="背景颜色">
+                            <dxe:PopupColorEdit Color="{Binding Option.BackgroundColor,Mode=TwoWay}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="标题颜色">
+                            <dxe:PopupColorEdit Color="{Binding Option.TitleColor,Mode=TwoWay}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="内容颜色">
+                            <dxe:PopupColorEdit Color="{Binding Option.ContentColor,Mode=TwoWay}" />
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <Button Content="保存" Width="120" Height="40" HorizontalAlignment="Right" Command="{Binding SaveCommand}"/>
+
+                </dxlc:LayoutControl>
+            </Grid>
+        </dx:DXTabItem>
+        <dx:DXTabItem Header="词库">
+            <Grid Background="Transparent">
+                <dxlc:LayoutControl>
+                    <dxlc:LayoutGroup Header="功能列表" View="GroupBox" IsCollapsible="True">
+                        <Button Content="导入" Height="40" Width="120" Command="{Binding FileCommand}"/>
+                    </dxlc:LayoutGroup>
+                </dxlc:LayoutControl>
+            </Grid>
+        </dx:DXTabItem>
+        <dx:DXTabItem Header="编辑">
+            <Grid Background="Transparent">
+                <dxlc:LayoutControl Orientation="Vertical">
+                    <dxlc:LayoutItem Label="标题：">
+                        <dxe:TextEdit Text="{Binding Lyric.Title,Mode=TwoWay}"/>
+                    </dxlc:LayoutItem>
+                    
+                    <dxlc:LayoutItem Label="内容：">
+                        <dxe:TextEdit Height="200" Text="{Binding Lyric.Content,Mode=TwoWay}" AcceptsReturn="True" VerticalContentAlignment="Top"/>
+                        <!--<dxre:RichEditControl Height="200"/>-->
+                    </dxlc:LayoutItem>
+                    <Button Content="提交" Width="120" Height="40" HorizontalAlignment="Right" Command="{Binding SubmitCommand}"/>
+                </dxlc:LayoutControl>
+            </Grid>
+        </dx:DXTabItem>
+        <dx:DXTabItem Header="播放">
+            <dxlc:TileLayoutControl>
+                <dxlc:Tile Size="Small" Content="开始播放" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" Command="{Binding StartCommand}"/>
+            </dxlc:TileLayoutControl>
+        </dx:DXTabItem>
+    </dx:DXTabControl>
+
+</dx:DXWindow>
