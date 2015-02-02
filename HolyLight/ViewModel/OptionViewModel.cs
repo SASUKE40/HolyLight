@@ -4,26 +4,22 @@ using HolyLight.DataModel;
 namespace HolyLight.ViewModel
 {
     using System;
+    using System.IO;
+
     using DevExpress.Mvvm.DataAnnotations;
     using System.Windows.Media;
 
-    using LiteDB;
+    using Newtonsoft.Json;
 
     public class OptionViewModel : ViewModelBase
     {
         private MainWindow mainWindow;
         private Lyric lyric = new Lyric();
+
+        private readonly string OPTION_CONFIG_FILE = "Option.json";
         protected MainViewModel MainViewModel { get; private set; }
 
-        protected IDialogService DialogService
-        {
-            get
-            {
-                return GetService<IDialogService>();
-            }
-        }
-
-        private Option option = new Option();
+        private Option option;
         public Option Option
         {
             get { return option; }
@@ -44,10 +40,18 @@ namespace HolyLight.ViewModel
         }
         public OptionViewModel()
         {
+            if (System.IO.File.Exists(OPTION_CONFIG_FILE))
+            {
+                Option = JsonConvert.DeserializeObject<Option>(System.IO.File.ReadAllText(OPTION_CONFIG_FILE));
+            }
+            else
+            {
+                Option = new Option();
+                System.IO.File.WriteAllText(OPTION_CONFIG_FILE, JsonConvert.SerializeObject(Option, Formatting.Indented));
+            }
         }
         [Command]
-        public void Submit()
-        {
+        public void Submit(){
             MainViewModel = new MainViewModel(Lyric);
             mainWindow = new MainWindow();
             mainWindow.DataContext = MainViewModel;
@@ -65,23 +69,13 @@ namespace HolyLight.ViewModel
         [Command]
         public void Save()
         {
-            using (var db = new LiteEngine(@"Option.db"))
-            {
-                Collection<Option> options = db.GetCollection<Option>("Options");
-                Option.Id = 1;
-                Option option = options.FindById(1);
-                Console.WriteLine(option);
-                options.Update(Option);
-            }
-//            Console.WriteLine(Option);
-        }}
+            System.IO.File.WriteAllText(OPTION_CONFIG_FILE, JsonConvert.SerializeObject(Option, Formatting.Indented));
+        }
+        
+    }
     public class Option
     {
-        [BsonId]
-        public int Id { get; set; }
-
         public int First { get; set; }
-
         public int Second { get; set; }
 
         public int Third { get; set; }
