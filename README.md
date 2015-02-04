@@ -11,6 +11,11 @@
 * 运行环境：.NET Framework 4
 * Github地址：[HolyLight](https://github.com/SASUKE40/HolyLight)
 
+### 预览
+
+![Preview1](https://raw.githubusercontent.com/SASUKE40/HolyLight/master/HolyLight/doc/Preview1.png "预览1")
+![Preview2](https://raw.githubusercontent.com/SASUKE40/HolyLight/master/HolyLight/doc/Preview2.png "预览2")
+
 ### 版权说明：
 
 > The MIT License (MIT)
