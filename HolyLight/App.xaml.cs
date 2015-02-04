@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows;
+﻿using System.Windows;
 
 namespace HolyLight
 {
+    using GalaSoft.MvvmLight.Threading;
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
@@ -12,6 +11,7 @@ namespace HolyLight
     {
         private void OnAppStartup_UpdateThemeName(object sender, StartupEventArgs e)
         {
+            DispatcherHelper.Initialize();
             DevExpress.Xpf.Core.ApplicationThemeHelper.UpdateApplicationThemeName();
         }
     }

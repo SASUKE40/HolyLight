@@ -5,9 +5,17 @@
              xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
              xmlns:viewModel="clr-namespace:HolyLight.ViewModel"
              xmlns:local="clr-namespace:HolyLight"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
              x:Class="HolyLight.OptionWindow"
              Title="圣光幻灯片" Height="400" Width="700" Icon="{dx:DXImage Image=Palette_32x32.png}"
              WindowStartupLocation="CenterScreen" DataContext="{Binding OptionViewModel, Source={StaticResource Locator}}">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="PreviewKeyDown">
+            <command:EventToCommand Command="{Binding KeyDownCommand}" PassEventArgsToCommand="True"></command:EventToCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <dx:DXTabControl>
         <dx:DXTabControl.View>
             <dx:TabControlMultiLineView AllowHideTabItems="False" HeaderLocation="Left" ShowHeaderMenu="False"/>
@@ -15,15 +23,15 @@
         <dx:DXTabItem Header="设置">
             <Grid Background="Transparent">
                 <dxlc:LayoutControl Orientation="Vertical">
-                    <dxlc:LayoutGroup View="GroupBox" Header="编号设置" IsCollapsible="True">
+                    <dxlc:LayoutGroup View="GroupBox" Header="歌曲设置" IsCollapsible="True">
                         <dxlc:LayoutItem Label="第一首">
-                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.First}" />
+                            <dxe:TextEdit Mask="d" MaskType="Numeric" Text="{Binding Option.First}" NullText="编号"/>
                         </dxlc:LayoutItem>
                         <dxlc:LayoutItem Label="第二首">
-                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.Second}" />
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.Second}" NullText="编号" />
                         </dxlc:LayoutItem>
                         <dxlc:LayoutItem Label="第三首">
-                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.Third}"/>
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.Third}" NullText="编号" />
                         </dxlc:LayoutItem>
                     </dxlc:LayoutGroup>
                     <dxlc:LayoutGroup Header="细节选项" View="GroupBox" IsCollapsible="True">
@@ -48,6 +56,20 @@
                             <dxe:PopupColorEdit Color="{Binding Option.ContentColor, Mode=TwoWay}" />
                         </dxlc:LayoutItem>
                     </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Header="细节编辑" View="GroupBox" IsCollapsible="True">
+                        <dxlc:LayoutItem Label="标题字体">
+                            <dxe:FontEdit Font="{Binding Option.TitleFontFamily,Mode=TwoWay}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="标题字号">
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.TitleFontSize,Mode=TwoWay}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="内容字体">
+                            <dxe:FontEdit Font="{Binding Option.ContentFontFamily,Mode=TwoWay}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="内容字号">
+                            <dxe:TextEdit MaskType="Numeric" Mask="d" Text="{Binding Option.ContentFontSize,Mode=TwoWay}"/>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
                     <Button Content="保存" Width="120" Height="40" HorizontalAlignment="Right" Command="{Binding SaveCommand}"/>
 
                 </dxlc:LayoutControl>
@@ -60,14 +82,21 @@
                         <Button Content="导入" Height="40" Width="120" Command="{Binding FileCommand}"/>
                     </dxlc:LayoutGroup>-->
                     <dxlc:LayoutGroup Header="歌词库" View="GroupBox" IsCollapsible="True">
-                        <dxg:GridControl ItemsSource="{Binding LyricCollection,Mode=TwoWay}" >
+                        <dxg:GridControl x:Name="LyricGridControl" ItemsSource="{Binding LyricView}" >
                             <dxg:GridControl.Columns>
-                                <dxg:GridColumn FieldName="Lid" Header="编号"/>
-                                <dxg:GridColumn FieldName="Title" Header="标题"/>
-                                <dxg:GridColumn FieldName="Content" Header="内容"/>
+<!--                                <dxg:GridColumn FieldName="Id" Header="ID"  VisibleIndex="0"/>-->
+                                <dxg:GridColumn FieldName="Lid" Header="编号" VisibleIndex="1" FixedWidth="True" Width="70"/>
+                                <dxg:GridColumn FieldName="Title" Header="标题" VisibleIndex="2" FixedWidth="True" Width="140"/>
+                                <dxg:GridColumn FieldName="Content" Header="内容" VisibleIndex="3"/>
                             </dxg:GridControl.Columns>
+                            <dxg:GridControl.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="编辑" Command="{Binding EditCommand}"></MenuItem>
+                                    <MenuItem Header="删除" Command="{Binding DeleteCommand}"></MenuItem>
+                                </ContextMenu>
+                            </dxg:GridControl.ContextMenu>
                             <dxg:GridControl.View>
-                                <dxg:TableView ShowGroupPanel="False"/>
+                                <dxg:TableView ShowGroupPanel="False" AutoWidth="True"/>
                             </dxg:GridControl.View>
                         </dxg:GridControl>
                     </dxlc:LayoutGroup>
@@ -94,7 +123,8 @@
         </dx:DXTabItem>
         <dx:DXTabItem Header="播放">
             <dxlc:TileLayoutControl>
-                <dxlc:Tile Size="Small" Content="开始播放" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" Command="{Binding StartCommand}"/>
+                <dxlc:Tile Size="Small" Content="开始播放" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" Command="{Binding StartCommand}" ToolTip="按F5快速播放哦~"></dxlc:Tile>
+                <dxlc:Tile Size="Small" Content="帮助" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" Command="{Binding HelpCommand}"></dxlc:Tile>
             </dxlc:TileLayoutControl>
         </dx:DXTabItem>
     </dx:DXTabControl>

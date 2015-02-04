@@ -1,11 +1,15 @@
 {
-  "First": 1,
-  "Second": 2,
-  "Third": 3,
-  "DisplayDateTime": "2015-02-02T00:00:00+08:00",
+  "First": 14,
+  "Second": 4,
+  "Third": 2,
+  "DisplayDateTime": "2015-02-04T00:00:00+08:00",
   "ShowTitle": true,
   "ShowDateTime": true,
-  "BackgroundColor": "#FF4F81BD",
-  "TitleColor": "#FF000000",
-  "ContentColor": "#FF000000"
+  "BackgroundColor": "#FF000000",
+  "TitleColor": "#FFFFFF00",
+  "ContentColor": "#FFFFFF00",
+  "TitleFontFamily": "微软雅黑",
+  "TitleFontSize": 72,
+  "ContentFontFamily": "幼圆",
+  "ContentFontSize": 60
 }

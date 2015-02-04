@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace HolyLight
 {
+    using GalaSoft.MvvmLight.Messaging;
+
     /// <summary>
     /// OptionWindow.xaml 的交互逻辑
     /// </summary>

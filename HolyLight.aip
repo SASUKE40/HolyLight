@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="11.7.1" version="11.7.1" Modules="architect" RootPath="." Language="zh" Id="{7642452F-4A9B-4CA4-818E-E48E64F5B02D}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="WebApplicationsComponent;MsiOdbcDataSrcComponent;SqlConnectionComponent;SharePointSlnComponent;SilverlightSlnComponent;MsiAppSearchComponent;MsiInstExSeqComponent;MsiDirectEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui#AnyCPU_Debug:aiui#AnyCPU_Release:aiui"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="选择 [|ProductName] 安装包" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_MINDOTNETVERSION" MultiBuildValue="DefaultBuild:4.0" ValueLocId="-"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="圣光幻灯片"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MultiBuildValue="DefaultBuild:style2blue" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="此 Installer 数据库包含了安装 [|ProductName] 所需的逻辑和数据。"/>
+    <ROW Property="ARPPRODUCTICON" Value="Palette_32x32.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="DefaultUIFont" Value="MicrosoftYahei" Type="2" Options="65536" MsiKey="DefaultUIFont"/>
+    <ROW Property="Manufacturer" Value="SASUKE"/>
+    <ROW Property="ProductCode" Value="2052:{7ECD21A4-67F6-473A-83C5-9AD54296B632} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="2052"/>
+    <ROW Property="ProductName" Value="圣光幻灯片"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{E34FAF43-8608-48BA-B449-2495132B1513}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME#AnyCPU_Debug:Windows 9x/ME#AnyCPU_Release:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME#AnyCPU_Debug:Windows 9x/ME#AnyCPU_Release:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0#AnyCPU_Debug:Windows NT 4.0#AnyCPU_Release:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0#AnyCPU_Debug:Windows NT 4.0#AnyCPU_Release:Windows NT 4.0" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="x64_Dir" Directory_Parent="APPDIR" DefaultDir="x64"/>
+    <ROW Directory="x86_Dir" Directory_Parent="APPDIR" DefaultDir="x86"/>
+    <ROW Directory="zhCN_Dir" Directory_Parent="APPDIR" DefaultDir="zh-CN"/>
+    <ROW Directory="zhHans_Dir" Directory_Parent="APPDIR" DefaultDir="zh-Hans"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_CustomARPName" ComponentId="{422E5A70-E5DC-403F-86BC-4A6A35880014}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_ExePath" ComponentId="{9E128997-38D7-49A6-B5E4-57D0CE3E24C0}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="DevExpress.Data.v14.2.dll" ComponentId="{C6F479E7-8A00-498B-A258-2E9B4CE3861A}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v14.2.dll"/>
+    <ROW Component="DevExpress.Data.v14.2.resources.dll" ComponentId="{21DCA7E6-8C78-4F64-B5D5-564BC1BF350C}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Data.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Images.v14.2.dll" ComponentId="{5341416A-DA82-4989-A06F-F5CF91742CDB}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Images.v14.2.dll"/>
+    <ROW Component="DevExpress.Office.v14.2.Core.dll" ComponentId="{B1608150-6587-45B8-92E5-BB80EAA7F926}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Office.v14.2.Core.dll"/>
+    <ROW Component="DevExpress.Printing.v14.2.Core.dll" ComponentId="{A6B15A09-C977-49B3-83F0-E856D01E47EF}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Printing.v14.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v14.2.Core.dll" ComponentId="{F12F8293-6360-4677-AD46-F2900AC1C811}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.RichEdit.v14.2.Core.dll"/>
+    <ROW Component="DevExpress.Xpf.Charts.v14.2.resources.dl" ComponentId="{A8ACC2D8-6F52-4ED0-9718-970526C60BC9}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Charts.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Controls.v14.2.dll" ComponentId="{7FF773DC-63E7-4F96-AD22-5EE695E339A6}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Controls.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.Core.v14.2.dll" ComponentId="{479C67F5-09D9-44E0-92E7-E90A18860A9E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Core.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.Core.v14.2.resources.dll" ComponentId="{4E144C90-4C84-4892-B168-928E09E62D87}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Core.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Docking.v14.2.dll" ComponentId="{573E97BD-BDBA-4577-A279-335A8A0EF6AA}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Docking.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.Docking.v14.2.resources.d" ComponentId="{F7AA9648-DE07-40CF-AC81-5E572F5459DD}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Docking.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Gauges.v14.2.resources.dl" ComponentId="{C2B34767-2BCA-49F1-A5D0-E2776597CA73}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Gauges.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Grid.v14.2.Core.dll" ComponentId="{2273C2B7-D1B7-426E-8B78-D7AD7842DEEE}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Grid.v14.2.Core.dll"/>
+    <ROW Component="DevExpress.Xpf.Grid.v14.2.Core.resources" ComponentId="{261B8961-C9E4-4F5F-8696-6653AFCF4942}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Grid.v14.2.Core.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Grid.v14.2.dll" ComponentId="{FA97F5EF-93CD-4362-A047-FD9BF82DD029}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Grid.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.LayoutControl.v14.2.dll" ComponentId="{C0EBED22-4E4B-4735-B128-95F0C11FA3BD}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.LayoutControl.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.LayoutControl.v14.2.resou" ComponentId="{496C9CDC-F8A1-4438-BE64-88A179913715}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.LayoutControl.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.NavBar.v14.2.resources.dl" ComponentId="{35D2634E-79BD-4E7C-8AF0-9D7A9FCEB447}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.NavBar.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.PdfViewer.v14.2.resources" ComponentId="{B3A9FDD2-7109-433D-99D5-9A43D6D6A5D3}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.PdfViewer.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Printing.v14.2.dll" ComponentId="{5604F6BC-1498-45B0-A743-946752A68AE7}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Printing.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.Printing.v14.2.resources." ComponentId="{8537C536-4A88-4C41-9777-6FA67EBA4873}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Printing.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.PropertyGrid.v14.2.resour" ComponentId="{CA5AC3B0-0C24-4088-9C58-2F41D170DDEE}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.PropertyGrid.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.ReportDesigner.v14.2.reso" ComponentId="{A683F446-2270-4D9F-8CF0-7FB089F65A54}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.ReportDesigner.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Ribbon.v14.2.dll" ComponentId="{05BB7B3C-54C4-4627-B079-3290D145D405}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Ribbon.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.Ribbon.v14.2.resources.dl" ComponentId="{C94357C1-C39B-4915-B449-81AF573148E7}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Ribbon.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.RichEdit.v14.2.dll" ComponentId="{1AF4CADB-8E14-4D0C-BBFE-F1AE5CB2D84C}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.RichEdit.v14.2.dll"/>
+    <ROW Component="DevExpress.Xpf.RichEdit.v14.2.resources." ComponentId="{D461BEDF-0BC8-4478-93F2-B6E220C61418}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.RichEdit.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Scheduler.v14.2.resources" ComponentId="{2B0B606D-C0A7-4519-A0B5-A66140D0572A}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.Scheduler.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.SpellChecker.v14.2.resour" ComponentId="{0F57E7EF-C647-4D03-B426-A979B6C1BE8D}" Directory_="zhCN_Dir" Attributes="0" KeyPath="DevExpress.Xpf.SpellChecker.v14.2.resources.dll"/>
+    <ROW Component="DevExpress.Xpf.Themes.Office2013.v14.2.d" ComponentId="{25D7C0D7-F8C1-45B7-9FB2-D05DA963D62F}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpf.Themes.Office2013.v14.2.dll"/>
+    <ROW Component="EntityFramework.SqlServer.dll" ComponentId="{F3BC7C25-155E-4871-A16D-F4C1AAF8DE60}" Directory_="APPDIR" Attributes="0" KeyPath="EntityFramework.SqlServer.dll"/>
+    <ROW Component="EntityFramework.dll" ComponentId="{22A611AC-2C3B-49DB-B311-D0AA321F3115}" Directory_="APPDIR" Attributes="0" KeyPath="EntityFramework.dll"/>
+    <ROW Component="GalaSoft.MvvmLight.Extras.dll" ComponentId="{388AAC32-33FF-4907-8EC4-738B47DB7048}" Directory_="APPDIR" Attributes="0" KeyPath="GalaSoft.MvvmLight.Extras.dll"/>
+    <ROW Component="GalaSoft.MvvmLight.dll" ComponentId="{BBB68BBE-EAB8-48DA-AF20-9564A6CF0EF1}" Directory_="APPDIR" Attributes="0" KeyPath="GalaSoft.MvvmLight.dll"/>
+    <ROW Component="HolyLight.exe" ComponentId="{2BC4B6AF-6664-4945-9073-10D45D0ACA9A}" Directory_="APPDIR" Attributes="0" KeyPath="HolyLight.exe"/>
+    <ROW Component="Lyric.db" ComponentId="{E9645085-1E2D-4E53-85CE-25B8C874617F}" Directory_="APPDIR" Attributes="0" KeyPath="Lyric.db" Type="0"/>
+    <ROW Component="Microsoft.CSharp.dll" ComponentId="{1AE4CDAF-6A46-4B6F-8308-2405ED15B225}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.CSharp.dll"/>
+    <ROW Component="Microsoft.Expression.Interactions.dll" ComponentId="{4C16D44A-E7F9-4BF1-8D1C-33F1C101B572}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Expression.Interactions.dll"/>
+    <ROW Component="Microsoft.Expression.Interactions.resour" ComponentId="{DF1267FC-48B1-4839-9C3D-8A8F60649C0F}" Directory_="zhHans_Dir" Attributes="0" KeyPath="Microsoft.Expression.Interactions.resources.dll"/>
+    <ROW Component="Microsoft.Expression.Prototyping.Inter_1" ComponentId="{B3F0D6CB-38D2-4450-82B6-CCEBFB7B619A}" Directory_="zhHans_Dir" Attributes="0" KeyPath="Microsoft.Expression.Prototyping.Interactivity.resources.dll"/>
+    <ROW Component="Microsoft.Expression.Prototyping.Interac" ComponentId="{0C2F914C-0B25-4ACA-845A-5B5A087D7EBA}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Expression.Prototyping.Interactivity.dll"/>
+    <ROW Component="Microsoft.Practices.ServiceLocation.dll" ComponentId="{73981CC4-194E-4623-80AD-D9E88319D4C0}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Practices.ServiceLocation.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{70CAD37B-7251-4D3B-A128-BE46982731A2}" Directory_="APPDIR" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="PresentationCore.dll" ComponentId="{47FA4B48-2130-4699-BB16-BE3A6FDB6C1B}" Directory_="APPDIR" Attributes="0" KeyPath="PresentationCore.dll"/>
+    <ROW Component="PresentationFramework.dll" ComponentId="{A26FAC63-7505-49B3-AA87-A8081DB0EDB0}" Directory_="APPDIR" Attributes="0" KeyPath="PresentationFramework.dll"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{0DD9D255-BFBF-4B36-A26B-4E19EEC42DAB}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SQLite.Interop.dll" ComponentId="{223BBE96-3F06-489C-BF4F-684C12428F7C}" Directory_="x86_Dir" Attributes="0" KeyPath="SQLite.Interop.dll"/>
+    <ROW Component="SQLite.Interop.dll_1" ComponentId="{0484722C-51A2-4637-B291-810884B9AA3B}" Directory_="x64_Dir" Attributes="256" KeyPath="SQLite.Interop.dll_1"/>
+    <ROW Component="System.ComponentModel.DataAnnotations.dl" ComponentId="{20E09A74-FA72-4175-ACCF-3F471CECC5D9}" Directory_="APPDIR" Attributes="0" KeyPath="System.ComponentModel.DataAnnotations.dll"/>
+    <ROW Component="System.Core.dll" ComponentId="{F14BD359-6F0C-4230-B232-88CF343F46F6}" Directory_="APPDIR" Attributes="0" KeyPath="System.Core.dll"/>
+    <ROW Component="System.Data.DataSetExtensions.dll" ComponentId="{98A5AA19-BB31-46A3-AC13-2708806CDCFA}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.DataSetExtensions.dll"/>
+    <ROW Component="System.Data.SQLite.EF6.dll" ComponentId="{2D6FE68B-7FCD-40E6-8EB3-7434EE8D26E5}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.SQLite.EF6.dll"/>
+    <ROW Component="System.Data.SQLite.dll" ComponentId="{3DE99E00-EA13-4A54-BA51-EBA03C5D4B6C}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.SQLite.dll"/>
+    <ROW Component="System.Data.dll" ComponentId="{327EA21D-59C6-45BD-830E-1E34B133CCBF}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.dll"/>
+    <ROW Component="System.Drawing.dll" ComponentId="{98CFDB28-D59A-4F8D-8F40-A345D9792931}" Directory_="APPDIR" Attributes="0" KeyPath="System.Drawing.dll"/>
+    <ROW Component="System.Printing.dll" ComponentId="{E60370AE-4CCF-4135-9E8A-222B298D3570}" Directory_="APPDIR" Attributes="0" KeyPath="System.Printing.dll"/>
+    <ROW Component="System.Windows.Forms.dll" ComponentId="{BCB9ED81-C1C6-4DD6-9B51-FA0A763A1D55}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.dll"/>
+    <ROW Component="System.Windows.Interactivity.dll" ComponentId="{49B4632F-882E-442B-80D5-C5352D4B3F8D}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Interactivity.dll"/>
+    <ROW Component="System.Xaml.dll" ComponentId="{C8B8C3B3-2D98-4152-A92B-E5F3B9E78BF9}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xaml.dll"/>
+    <ROW Component="System.Xml.Linq.dll" ComponentId="{56F98013-1995-4578-97DD-960CEB01C4EC}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.Linq.dll"/>
+    <ROW Component="System.Xml.dll" ComponentId="{017060EB-4060-4BA6-852D-695CF7EE76D4}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.dll"/>
+    <ROW Component="System.dll" ComponentId="{11B38822-F675-4A36-A578-5ED8C1CCBC65}" Directory_="APPDIR" Attributes="0" KeyPath="System.dll"/>
+    <ROW Component="UIAutomationProvider.dll" ComponentId="{8F162E81-DAB3-49C8-B4B5-5CEBAE4B5864}" Directory_="APPDIR" Attributes="0" KeyPath="UIAutomationProvider.dll"/>
+    <ROW Component="UIAutomationTypes.dll" ComponentId="{8223D344-C2F8-46AD-A8A9-720DAA6DE4A4}" Directory_="APPDIR" Attributes="0" KeyPath="UIAutomationTypes.dll"/>
+    <ROW Component="WindowsBase.dll" ComponentId="{F8607BDE-0D1E-4CA7-A84D-6A47850D5456}" Directory_="APPDIR" Attributes="0" KeyPath="WindowsBase.dll"/>
+    <ROW Component="mscorlib.dll" ComponentId="{779E9367-E813-4556-BB19-8998935B5C73}" Directory_="APPDIR" Attributes="0" KeyPath="mscorlib.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_ExePath DevExpress.Data.v14.2.dll DevExpress.Data.v14.2.resources.dll DevExpress.Images.v14.2.dll DevExpress.Office.v14.2.Core.dll DevExpress.Printing.v14.2.Core.dll DevExpress.RichEdit.v14.2.Core.dll DevExpress.Xpf.Charts.v14.2.resources.dl DevExpress.Xpf.Controls.v14.2.dll DevExpress.Xpf.Core.v14.2.dll DevExpress.Xpf.Core.v14.2.resources.dll DevExpress.Xpf.Docking.v14.2.dll DevExpress.Xpf.Docking.v14.2.resources.d DevExpress.Xpf.Gauges.v14.2.resources.dl DevExpress.Xpf.Grid.v14.2.Core.dll DevExpress.Xpf.Grid.v14.2.Core.resources DevExpress.Xpf.Grid.v14.2.dll DevExpress.Xpf.LayoutControl.v14.2.dll DevExpress.Xpf.LayoutControl.v14.2.resou DevExpress.Xpf.NavBar.v14.2.resources.dl DevExpress.Xpf.PdfViewer.v14.2.resources DevExpress.Xpf.Printing.v14.2.dll DevExpress.Xpf.Printing.v14.2.resources. DevExpress.Xpf.PropertyGrid.v14.2.resour DevExpress.Xpf.ReportDesigner.v14.2.reso DevExpress.Xpf.Ribbon.v14.2.dll DevExpress.Xpf.Ribbon.v14.2.resources.dl DevExpress.Xpf.RichEdit.v14.2.dll DevExpress.Xpf.RichEdit.v14.2.resources. DevExpress.Xpf.Scheduler.v14.2.resources DevExpress.Xpf.SpellChecker.v14.2.resour DevExpress.Xpf.Themes.Office2013.v14.2.d EntityFramework.SqlServer.dll EntityFramework.dll GalaSoft.MvvmLight.Extras.dll GalaSoft.MvvmLight.dll HolyLight.exe Lyric.db Microsoft.CSharp.dll Microsoft.Expression.Interactions.dll Microsoft.Expression.Interactions.resour Microsoft.Expression.Prototyping.Inter_1 Microsoft.Expression.Prototyping.Interac Microsoft.Practices.ServiceLocation.dll Newtonsoft.Json.dll PresentationCore.dll PresentationFramework.dll SHORTCUTDIR SQLite.Interop.dll SQLite.Interop.dll_1 System.ComponentModel.DataAnnotations.dl System.Core.dll System.Data.DataSetExtensions.dll System.Data.SQLite.EF6.dll System.Data.SQLite.dll System.Data.dll System.Drawing.dll System.Printing.dll System.Windows.Forms.dll System.Windows.Interactivity.dll System.Xaml.dll System.Xml.Linq.dll System.Xml.dll System.dll UIAutomationProvider.dll UIAutomationTypes.dll WindowsBase.dll mscorlib.dll"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="DevExpress.Data.v14.2.dll" Component_="DevExpress.Data.v14.2.dll" FileName="DEVEXP~4.DLL|DevExpress.Data.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Data.v14.2.dll" SelfReg="false" NextFile="System.Printing.dll"/>
+    <ROW File="DevExpress.Data.v14.2.resources.dll" Component_="DevExpress.Data.v14.2.resources.dll" FileName="DEVEXP~1.DLL|DevExpress.Data.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Data.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Charts.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Images.v14.2.dll" Component_="DevExpress.Images.v14.2.dll" FileName="DEVEXP~5.DLL|DevExpress.Images.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Images.v14.2.dll" SelfReg="false" NextFile="DevExpress.Office.v14.2.Core.dll"/>
+    <ROW File="DevExpress.Office.v14.2.Core.dll" Component_="DevExpress.Office.v14.2.Core.dll" FileName="DEVEXP~6.DLL|DevExpress.Office.v14.2.Core.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Office.v14.2.Core.dll" SelfReg="false" NextFile="DevExpress.RichEdit.v14.2.Core.dll"/>
+    <ROW File="DevExpress.Printing.v14.2.Core.dll" Component_="DevExpress.Printing.v14.2.Core.dll" FileName="DEVEXP~1.DLL|DevExpress.Printing.v14.2.Core.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Printing.v14.2.Core.dll" SelfReg="false" NextFile="DevExpress.Xpf.Controls.v14.2.dll"/>
+    <ROW File="DevExpress.RichEdit.v14.2.Core.dll" Component_="DevExpress.RichEdit.v14.2.Core.dll" FileName="DEVEXP~7.DLL|DevExpress.RichEdit.v14.2.Core.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.RichEdit.v14.2.Core.dll" SelfReg="false" NextFile="DevExpress.Xpf.Core.v14.2.dll"/>
+    <ROW File="DevExpress.Xpf.Charts.v14.2.resources.dll" Component_="DevExpress.Xpf.Charts.v14.2.resources.dl" FileName="DEVEXP~2.DLL|DevExpress.Xpf.Charts.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Charts.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Core.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Controls.v14.2.dll" Component_="DevExpress.Xpf.Controls.v14.2.dll" FileName="DEVEXP~2.DLL|DevExpress.Xpf.Controls.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Controls.v14.2.dll" SelfReg="false" NextFile="DevExpress.Xpf.Docking.v14.2.dll"/>
+    <ROW File="DevExpress.Xpf.Core.v14.2.dll" Component_="DevExpress.Xpf.Core.v14.2.dll" FileName="DEVEXP~8.DLL|DevExpress.Xpf.Core.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Core.v14.2.dll" SelfReg="false" NextFile="System.Data.SQLite.dll"/>
+    <ROW File="DevExpress.Xpf.Core.v14.2.resources.dll" Component_="DevExpress.Xpf.Core.v14.2.resources.dll" FileName="DEVEXP~3.DLL|DevExpress.Xpf.Core.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Core.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Docking.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Docking.v14.2.dll" Component_="DevExpress.Xpf.Docking.v14.2.dll" FileName="DEVEXP~3.DLL|DevExpress.Xpf.Docking.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Docking.v14.2.dll" SelfReg="false" NextFile="UIAutomationProvider.dll"/>
+    <ROW File="DevExpress.Xpf.Docking.v14.2.resources.dll" Component_="DevExpress.Xpf.Docking.v14.2.resources.d" FileName="DEVEXP~4.DLL|DevExpress.Xpf.Docking.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Docking.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Gauges.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Gauges.v14.2.resources.dll" Component_="DevExpress.Xpf.Gauges.v14.2.resources.dl" FileName="DEVEXP~5.DLL|DevExpress.Xpf.Gauges.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Gauges.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Grid.v14.2.Core.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Grid.v14.2.Core.dll" Component_="DevExpress.Xpf.Grid.v14.2.Core.dll" FileName="DEVEX~10.DLL|DevExpress.Xpf.Grid.v14.2.Core.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Grid.v14.2.Core.dll" SelfReg="false" NextFile="DevExpress.Xpf.LayoutControl.v14.2.dll"/>
+    <ROW File="DevExpress.Xpf.Grid.v14.2.Core.resources.dll" Component_="DevExpress.Xpf.Grid.v14.2.Core.resources" FileName="DEVEXP~6.DLL|DevExpress.Xpf.Grid.v14.2.Core.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Grid.v14.2.Core.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.LayoutControl.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Grid.v14.2.dll" Component_="DevExpress.Xpf.Grid.v14.2.dll" FileName="DEVEXP~9.DLL|DevExpress.Xpf.Grid.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Grid.v14.2.dll" SelfReg="false" NextFile="DevExpress.Xpf.Grid.v14.2.Core.dll"/>
+    <ROW File="DevExpress.Xpf.LayoutControl.v14.2.dll" Component_="DevExpress.Xpf.LayoutControl.v14.2.dll" FileName="DEVEX~11.DLL|DevExpress.Xpf.LayoutControl.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.LayoutControl.v14.2.dll" SelfReg="false" NextFile="System.Data.SQLite.EF6.dll"/>
+    <ROW File="DevExpress.Xpf.LayoutControl.v14.2.resources.dll" Component_="DevExpress.Xpf.LayoutControl.v14.2.resou" FileName="DEVEXP~7.DLL|DevExpress.Xpf.LayoutControl.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.LayoutControl.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.NavBar.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.NavBar.v14.2.resources.dll" Component_="DevExpress.Xpf.NavBar.v14.2.resources.dl" FileName="DEVEXP~8.DLL|DevExpress.Xpf.NavBar.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.NavBar.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.PdfViewer.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.PdfViewer.v14.2.resources.dll" Component_="DevExpress.Xpf.PdfViewer.v14.2.resources" FileName="DEVEXP~9.DLL|DevExpress.Xpf.PdfViewer.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.PdfViewer.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Printing.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Printing.v14.2.dll" Component_="DevExpress.Xpf.Printing.v14.2.dll" FileName="DEVEX~12.DLL|DevExpress.Xpf.Printing.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Printing.v14.2.dll" SelfReg="false" NextFile="DevExpress.Xpf.RichEdit.v14.2.dll"/>
+    <ROW File="DevExpress.Xpf.Printing.v14.2.resources.dll" Component_="DevExpress.Xpf.Printing.v14.2.resources." FileName="DEVEX~10.DLL|DevExpress.Xpf.Printing.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Printing.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.PropertyGrid.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.PropertyGrid.v14.2.resources.dll" Component_="DevExpress.Xpf.PropertyGrid.v14.2.resour" FileName="DEVEX~11.DLL|DevExpress.Xpf.PropertyGrid.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.PropertyGrid.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.ReportDesigner.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.ReportDesigner.v14.2.resources.dll" Component_="DevExpress.Xpf.ReportDesigner.v14.2.reso" FileName="DEVEX~12.DLL|DevExpress.Xpf.ReportDesigner.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.ReportDesigner.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Ribbon.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Ribbon.v14.2.dll" Component_="DevExpress.Xpf.Ribbon.v14.2.dll" FileName="DEVEX~14.DLL|DevExpress.Xpf.Ribbon.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Ribbon.v14.2.dll" SelfReg="false" NextFile="System.Drawing.dll"/>
+    <ROW File="DevExpress.Xpf.Ribbon.v14.2.resources.dll" Component_="DevExpress.Xpf.Ribbon.v14.2.resources.dl" FileName="DEVEX~13.DLL|DevExpress.Xpf.Ribbon.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Ribbon.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.RichEdit.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.RichEdit.v14.2.dll" Component_="DevExpress.Xpf.RichEdit.v14.2.dll" FileName="DEVEX~13.DLL|DevExpress.Xpf.RichEdit.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.RichEdit.v14.2.dll" SelfReg="false" NextFile="mscorlib.dll"/>
+    <ROW File="DevExpress.Xpf.RichEdit.v14.2.resources.dll" Component_="DevExpress.Xpf.RichEdit.v14.2.resources." FileName="DEVEX~14.DLL|DevExpress.Xpf.RichEdit.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.RichEdit.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.Scheduler.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.Scheduler.v14.2.resources.dll" Component_="DevExpress.Xpf.Scheduler.v14.2.resources" FileName="DEVEX~15.DLL|DevExpress.Xpf.Scheduler.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.Scheduler.v14.2.resources.dll" SelfReg="false" NextFile="DevExpress.Xpf.SpellChecker.v14.2.resources.dll"/>
+    <ROW File="DevExpress.Xpf.SpellChecker.v14.2.resources.dll" Component_="DevExpress.Xpf.SpellChecker.v14.2.resour" FileName="DEVEX~16.DLL|DevExpress.Xpf.SpellChecker.v14.2.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-CN\DevExpress.Xpf.SpellChecker.v14.2.resources.dll" SelfReg="false" NextFile="Lyric.db"/>
+    <ROW File="DevExpress.Xpf.Themes.Office2013.v14.2.dll" Component_="DevExpress.Xpf.Themes.Office2013.v14.2.d" FileName="DEVEX~15.DLL|DevExpress.Xpf.Themes.Office2013.v14.2.dll" Attributes="0" SourcePath="d:\Program Files\DevExpress 14.2\Components\Bin\Framework\DevExpress.Xpf.Themes.Office2013.v14.2.dll" SelfReg="false" NextFile="EntityFramework.dll"/>
+    <ROW File="EntityFramework.SqlServer.dll" Component_="EntityFramework.SqlServer.dll" FileName="ENTITY~2.DLL|EntityFramework.SqlServer.dll" Attributes="0" SourcePath="packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll" SelfReg="false" NextFile="GalaSoft.MvvmLight.dll"/>
+    <ROW File="EntityFramework.dll" Component_="EntityFramework.dll" FileName="ENTITY~1.DLL|EntityFramework.dll" Attributes="0" SourcePath="packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll" SelfReg="false" NextFile="System.Xaml.dll"/>
+    <ROW File="GalaSoft.MvvmLight.Extras.dll" Component_="GalaSoft.MvvmLight.Extras.dll" FileName="GALASO~2.DLL|GalaSoft.MvvmLight.Extras.dll" Attributes="0" SourcePath="packages\MvvmLightLibs.5.0.2.0\lib\net40\GalaSoft.MvvmLight.Extras.dll" SelfReg="false" NextFile="Microsoft.Expression.Interactions.dll"/>
+    <ROW File="GalaSoft.MvvmLight.dll" Component_="GalaSoft.MvvmLight.dll" FileName="GALASO~1.DLL|GalaSoft.MvvmLight.dll" Attributes="0" SourcePath="packages\MvvmLightLibs.5.0.2.0\lib\net40\GalaSoft.MvvmLight.dll" SelfReg="false" NextFile="GalaSoft.MvvmLight.Extras.dll"/>
+    <ROW File="HolyLight.exe" Component_="HolyLight.exe" FileName="HOLYLI~1.EXE|HolyLight.exe" Attributes="0" SourcePath="HolyLight\bin\Release\HolyLight.exe" SelfReg="false" NextFile="DevExpress.Printing.v14.2.Core.dll" DigSign="true"/>
+    <ROW File="HolyLight.exe.config" Component_="Lyric.db" FileName="HOLYLI~1.CON|HolyLight.exe.config" Attributes="0" SourcePath="HolyLight\bin\Release\HolyLight.exe.config" SelfReg="false" NextFile="SQLite.Interop.dll"/>
+    <ROW File="Lyric.db" Component_="Lyric.db" FileName="Lyric.db" Attributes="0" SourcePath="HolyLight\bin\Debug\Lyric.db" SelfReg="false" NextFile="Option.json"/>
+    <ROW File="Microsoft.CSharp.dll" Component_="Microsoft.CSharp.dll" FileName="MICROS~4.DLL|Microsoft.CSharp.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll" SelfReg="false" NextFile="System.Xml.dll"/>
+    <ROW File="Microsoft.Expression.Interactions.dll" Component_="Microsoft.Expression.Interactions.dll" FileName="MICROS~1.DLL|Microsoft.Expression.Interactions.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.0\Libraries\Microsoft.Expression.Interactions.dll" SelfReg="false" NextFile="Microsoft.Expression.Prototyping.Interactivity.dll"/>
+    <ROW File="Microsoft.Expression.Interactions.resources.dll" Component_="Microsoft.Expression.Interactions.resour" FileName="MICROS~1.DLL|Microsoft.Expression.Interactions.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll" SelfReg="false" NextFile="Microsoft.Expression.Prototyping.Interactivity.resources.dll"/>
+    <ROW File="Microsoft.Expression.Prototyping.Interactivity.dll" Component_="Microsoft.Expression.Prototyping.Interac" FileName="MICROS~2.DLL|Microsoft.Expression.Prototyping.Interactivity.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.0\Libraries\Microsoft.Expression.Prototyping.Interactivity.dll" SelfReg="false" NextFile="Microsoft.Practices.ServiceLocation.dll"/>
+    <ROW File="Microsoft.Expression.Prototyping.Interactivity.resources.dll" Component_="Microsoft.Expression.Prototyping.Inter_1" FileName="MICROS~2.DLL|Microsoft.Expression.Prototyping.Interactivity.resources.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\zh-Hans\Microsoft.Expression.Prototyping.Interactivity.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Practices.ServiceLocation.dll" Component_="Microsoft.Practices.ServiceLocation.dll" FileName="MICROS~3.DLL|Microsoft.Practices.ServiceLocation.dll" Attributes="0" SourcePath="packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll" SelfReg="false" NextFile="System.dll"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll" SelfReg="false" NextFile="DevExpress.Xpf.Themes.Office2013.v14.2.dll"/>
+    <ROW File="Option.json" Component_="Lyric.db" FileName="OPTION~1.JSO|Option.json" Attributes="0" SourcePath="HolyLight\bin\Debug\Option.json" SelfReg="false" NextFile="HolyLight.exe.config"/>
+    <ROW File="PresentationCore.dll" Component_="PresentationCore.dll" FileName="PRESEN~1.DLL|PresentationCore.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationCore.dll" SelfReg="false" NextFile="PresentationFramework.dll"/>
+    <ROW File="PresentationFramework.dll" Component_="PresentationFramework.dll" FileName="PRESEN~2.DLL|PresentationFramework.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll" SelfReg="false" NextFile="HolyLight.exe"/>
+    <ROW File="SQLite.Interop.dll" Component_="SQLite.Interop.dll" FileName="SQLITE~1.DLL|SQLite.Interop.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\x86\SQLite.Interop.dll" SelfReg="false" NextFile="SQLite.Interop.dll_1"/>
+    <ROW File="SQLite.Interop.dll_1" Component_="SQLite.Interop.dll_1" FileName="SQLITE~1.DLL|SQLite.Interop.dll" Attributes="0" SourcePath="HolyLight\bin\Debug\x64\SQLite.Interop.dll" SelfReg="false" NextFile="Microsoft.Expression.Interactions.resources.dll"/>
+    <ROW File="System.ComponentModel.DataAnnotations.dll" Component_="System.ComponentModel.DataAnnotations.dl" FileName="SYSTEM~6.DLL|System.ComponentModel.DataAnnotations.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.DataAnnotations.dll" SelfReg="false" NextFile="System.Data.dll"/>
+    <ROW File="System.Core.dll" Component_="System.Core.dll" FileName="SYSTE~11.DLL|System.Core.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" SelfReg="false" NextFile="System.Xml.Linq.dll"/>
+    <ROW File="System.Data.DataSetExtensions.dll" Component_="System.Data.DataSetExtensions.dll" FileName="SYSTE~13.DLL|System.Data.DataSetExtensions.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" SelfReg="false" NextFile="WindowsBase.dll"/>
+    <ROW File="System.Data.SQLite.EF6.dll" Component_="System.Data.SQLite.EF6.dll" FileName="SYSTEM~3.DLL|System.Data.SQLite.EF6.dll" Attributes="0" SourcePath="packages\System.Data.SQLite.EF6.1.0.94.0\lib\net40\System.Data.SQLite.EF6.dll" SelfReg="false" NextFile="DevExpress.Xpf.Printing.v14.2.dll"/>
+    <ROW File="System.Data.SQLite.dll" Component_="System.Data.SQLite.dll" FileName="SYSTEM~2.DLL|System.Data.SQLite.dll" Attributes="0" SourcePath="packages\System.Data.SQLite.Core.1.0.94.0\lib\net40\System.Data.SQLite.dll" SelfReg="false" NextFile="DevExpress.Xpf.Grid.v14.2.dll"/>
+    <ROW File="System.Data.dll" Component_="System.Data.dll" FileName="SYSTEM~7.DLL|System.Data.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" SelfReg="false" NextFile="System.Windows.Forms.dll"/>
+    <ROW File="System.Drawing.dll" Component_="System.Drawing.dll" FileName="SYSTEM~4.DLL|System.Drawing.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" SelfReg="false" NextFile="Newtonsoft.Json.dll"/>
+    <ROW File="System.Printing.dll" Component_="System.Printing.dll" FileName="SYSTEM~1.DLL|System.Printing.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Printing.dll" SelfReg="false" NextFile="DevExpress.Images.v14.2.dll"/>
+    <ROW File="System.Windows.Forms.dll" Component_="System.Windows.Forms.dll" FileName="SYSTEM~8.DLL|System.Windows.Forms.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" SelfReg="false" NextFile="UIAutomationTypes.dll"/>
+    <ROW File="System.Windows.Interactivity.dll" Component_="System.Windows.Interactivity.dll" FileName="SYSTEM~9.DLL|System.Windows.Interactivity.dll" Attributes="0" SourcePath="packages\MvvmLightLibs.5.0.2.0\lib\net40\System.Windows.Interactivity.dll" SelfReg="false" NextFile="Microsoft.CSharp.dll"/>
+    <ROW File="System.Xaml.dll" Component_="System.Xaml.dll" FileName="SYSTEM~5.DLL|System.Xaml.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xaml.dll" SelfReg="false" NextFile="EntityFramework.SqlServer.dll"/>
+    <ROW File="System.Xml.Linq.dll" Component_="System.Xml.Linq.dll" FileName="SYSTE~12.DLL|System.Xml.Linq.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" SelfReg="false" NextFile="System.Data.DataSetExtensions.dll"/>
+    <ROW File="System.Xml.dll" Component_="System.Xml.dll" FileName="SYSTE~10.DLL|System.Xml.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" SelfReg="false" NextFile="System.Core.dll"/>
+    <ROW File="System.dll" Component_="System.dll" FileName="System.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" SelfReg="false" NextFile="System.ComponentModel.DataAnnotations.dll"/>
+    <ROW File="UIAutomationProvider.dll" Component_="UIAutomationProvider.dll" FileName="UIAUTO~1.DLL|UIAutomationProvider.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\UIAutomationProvider.dll" SelfReg="false" NextFile="DevExpress.Data.v14.2.dll"/>
+    <ROW File="UIAutomationTypes.dll" Component_="UIAutomationTypes.dll" FileName="UIAUTO~2.DLL|UIAutomationTypes.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\UIAutomationTypes.dll" SelfReg="false" NextFile="System.Windows.Interactivity.dll"/>
+    <ROW File="WindowsBase.dll" Component_="WindowsBase.dll" FileName="WINDOW~1.DLL|WindowsBase.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.dll" SelfReg="false" NextFile="DevExpress.Data.v14.2.resources.dll"/>
+    <ROW File="mscorlib.dll" Component_="mscorlib.dll" FileName="mscorlib.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" SelfReg="false" NextFile="DevExpress.Xpf.Ribbon.v14.2.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="AnyCPU_Debug" BuildName="AnyCPU_Debug" BuildOrder="2" BuildType="0" PackageFolder="AnyCPU_DebugSetupFiles" PackageFileName="HolyLight" Languages="zh" InstallationType="4" PackageType="1" ExtUI="true" UseLargeSchema="true"/>
+    <ROW BuildKey="AnyCPU_Release" BuildName="AnyCPU_Release" BuildOrder="3" BuildType="0" PackageFolder="AnyCPU_ReleaseSetupFiles" PackageFileName="HolyLight" Languages="zh" InstallationType="4" PackageType="1" ExtUI="true" UseLargeSchema="true"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." PackageFileName="圣光幻灯片" Languages="zh" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" UseLargeSchema="true" ExeName="圣光幻灯片"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_zh.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="正在删除从档案中提取的文件" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="正在删除从档案中提取的文件" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="正在从档案中提取文件" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="正在从档案中提取文件" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_DOTNET40_SEARCH" Signature_="AI_DotNet40SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_DOTNET451_SEARCH" Signature_="AI_DotNet451SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_DOTNET452_SEARCH" Signature_="AI_DotNet452SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_DOTNET45_SEARCH" Signature_="AI_DotNet45SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#HolyLight.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="Palette_32x32.exe" SourcePath="HolyLight\Palette_32x32.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+    <ROW Action="AI_AppSearchEx" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_DpiContentScale" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(AI_DOTNET40_SEARCH = &quot;#1&quot;) OR (AI_DOTNET45_SEARCH &gt;= &quot;4.5&quot;) OR (AI_DOTNET451_SEARCH &gt;= &quot;#378675&quot;)" Description="[ProductName] 无法安装在 .NET Framework 版本低于 [AI_MINDOTNETVERSION] 的系统上。" DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT40Display]" DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild;AnyCPU_Debug;AnyCPU_Release"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild;AnyCPU_Debug;AnyCPU_Release"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild;AnyCPU_Debug;AnyCPU_Release"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_DotNet40SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Install" Type="2"/>
+    <ROW Signature_="AI_DotNet451SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Release" Type="2"/>
+    <ROW Signature_="AI_DotNet452SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Release" Type="2"/>
+    <ROW Signature_="AI_DotNet45SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Version" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
+    <ROW Registry="EstimatedSize" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="EstimatedSize" Value="#[AI_ARP_SIZE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#0" Component_="AI_CustomARPName"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="HolyLight.exe" Directory_="SHORTCUTDIR" Name="圣光幻灯片" Component_="HolyLight.exe" Target="[#HolyLight.exe]" Description="乐恩教会版权所有" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="HolyLight.exe_1" Directory_="DesktopFolder" Name="圣光幻灯片" Component_="HolyLight.exe" Target="[#HolyLight.exe]" Description="乐恩教会版权所有" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiTextStyleComponent">
+    <ROW TextStyle="CfTitleFont" FaceName="Microsoft YaHei UI" Size="8" Color="16777215" StyleBits="0" MsiKey="CfTitleFont"/>
+    <ROW TextStyle="DlgFont8" FaceName="Microsoft YaHei UI" Size="8" Color="0" StyleBits="0" MsiKey="DlgFont8"/>
+    <ROW TextStyle="DlgFontBold8" FaceName="Microsoft YaHei UI" Size="8" Color="0" StyleBits="1" MsiKey="DlgFontBold8"/>
+    <ROW TextStyle="MicrosoftYahei" FaceName="Microsoft YaHei UI" Size="8" Color="0" StyleBits="0"/>
+    <ROW TextStyle="VerdanaBold13" FaceName="Microsoft YaHei UI" Size="12" Color="0" StyleBits="1" MsiKey="VerdanaBold13"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="C673FE9433B49AFAC9592AB26B8F8E4" DisplayName=".NET Framework 4.0" SetupFileUrl="Prerequisites\.NET Framework 4.0\dotNetFx40_Full_x86_x64.exe" Location="0" ExactSize="50449456" WinNTVersions="Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows Server 2003 x86, Windows 8 x86, Windows 8.1 x86" WinNT64Versions="Windows XP x64, Windows Server 2003 x64, Windows 8 x64, Windows Server 2012 x64, Windows 8.1 x64, Windows Server 2012 R2 x64" Operator="1" NoUiComLine="/q /norestart" Options="x" MD5="251743dfd3fda414570524bac9e55381" TargetName=".NET Framework 4.0\dotNetFx40_Full_x86_x64.exe"/>
+    <ATTRIBUTE name="PrereqsOrder" value="C673FE9433B49AFAC9592AB26B8F8E4"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="C673FE9433B49AFAC9592AB26B8F8E4Install" Prereq="C673FE9433B49AFAC9592AB26B8F8E4" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Install" RefContent="M1" Order="1" Property="PreReqSearch_C673FE9433B49AFAC9592AB26B8F8E4"/>
+  </COMPONENT>
+</DOCUMENT>

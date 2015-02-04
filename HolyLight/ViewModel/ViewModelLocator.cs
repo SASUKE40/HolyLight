@@ -12,8 +12,8 @@ namespace HolyLight.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<OptionViewModel>();
+            SimpleIoc.Default.Register<MainViewModel>(true);
+            SimpleIoc.Default.Register<OptionViewModel>(true);
         }
 
         public MainViewModel MainViewModel
